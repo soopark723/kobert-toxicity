@@ -59,22 +59,22 @@ Predicted Labels:
   - cleanness     : NO  (p=0.092)
 ```
 ---
-Dataset and Preprocessing
+## Dataset and Preprocessing
 - The model was trained on a dataset containing Korean text annotated with multiple labels indicating types of bias or toxicity.
 - Input sentences are tokenized and fed into the model in batches (train batch size: 88, validation batch size: 25).
 - No additional preprocessing details are included here but may include normalization and tokenization compatible with the underlying model architecture.
 
-Model Architecture and Training Details
+## Model Architecture and Training Details
 - Training utilized a focal loss per label, optimized over 35 epochs.
 - The training logs show consistent improvement in training loss and accuracy, with validation accuracy plateauing near 76%.
 
-Limitations and Future Work
+## Limitations and Future Work
 - Low Macro F1 Score: The model struggles with some classes, likely due to data imbalance or challenging semantics.
 - Thresholding: Using a fixed threshold of 0.5 for all labels might not be optimal. Threshold tuning or using class-specific thresholds could improve results.
 - Data Augmentation: Expanding and balancing the training dataset could help with rare classes.
 - Multi-Language Support: Currently tailored for Korean text, but architecture could be adapted for other languages.
 ---
-How to Run
+## How to Run
 1. Clone the repo.
 2. Prepare your input dataset or individual sentences.
 3. Load the pretrained model weights (if provided).
