@@ -67,6 +67,7 @@ Predicted Labels:
 ## Model Architecture and Training Details
 - Training utilized a focal loss per label, optimized over 35 epochs.
 - The training logs show consistent improvement in training loss and accuracy, with validation accuracy plateauing near 76%.
+- Example of execution results can be found here: https://colab.research.google.com/drive/1yjx1PiRhooLBLGKAa6FfG9hMSIseCujq#scrollTo=_rrDz1TGnl9J.
 
 ## Limitations and Future Work
 - Low Macro F1 Score: The model struggles with some classes, likely due to data imbalance or challenging semantics.
